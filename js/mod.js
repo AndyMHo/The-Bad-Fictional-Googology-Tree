@@ -19,9 +19,10 @@ let VERSION = {
 let changelog = `<h1>Changelog:</h1><br>
 <h3>v0.0 - Literally nothing</h3><br>
  - Literally nothing. What did you expect? oh right the default green prestige layer<br>
-<h3>v0.1 - A layer???`
+<h3>v0.1 - A layer???<br>
+ - Added the zero-operator layer.`
 
-let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
+let winText = `congrats, you broke the fictional limit and beat the game! until a new update comes...`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
