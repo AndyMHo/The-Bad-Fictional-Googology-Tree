@@ -24,7 +24,8 @@ let changelog = `<h1>Changelog:</h1><br>
 <h4>v0.1.1 - An upgrade???</h4><br>
  - Added u11 to the zero-hyperoperator layer.<br>
 <h4>v0.1.2 - The other upgrades</h4><br>
- - Added two more upgrades to the zero-hyperoperator layer.`
+ - Added two more upgrades to the zero-hyperoperator layer.<br>
+ - Is it balanced?`
 
 let winText = `congrats, you broke the fictional limit and beat the game! until a new update comes...`
 
