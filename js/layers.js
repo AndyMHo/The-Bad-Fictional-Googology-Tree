@@ -15,6 +15,10 @@ addLayer("zo", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+        
+        if(hasUpgrade('zo', 12))
+        mult = upgradeEffect('zo', 12)
+        
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -30,6 +34,24 @@ addLayer("zo", {
             title: "For the dozenal gods",
             description: "Dozenuple (x12) your point gain.",
             cost: new Decimal(3)
+        },
+        12: {
+            title: "One for themselves",
+            description: "Hyper-zeroators boosts itself.",
+            cost: new Decimal(15),
+            effect() {
+                return (player[this.layer].points.sqrt()).sqrt().max(new Decimal(1))
+            },
+            effectDisplay() { return "×"+format(upgradeEffect(this.layer, this.id)) }
+        },
+        13: {
+            title: "Finally, it's useful now!",
+            description: "Hyper-zeroators boosts points.",
+            cost: new Decimal(50),
+            effect() {
+                return player[this.layer].points.sqrt().max(new Decimal(1))
+            },
+            effectDisplay() { return "×"+format(upgradeEffect(this.layer, this.id)) }
         }
     }
 })
