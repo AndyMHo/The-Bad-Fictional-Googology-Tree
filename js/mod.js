@@ -12,15 +12,17 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.1",
-	name: "A layer???",
+	num: "0.1.1",
+	name: "An upgrade???",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
 <h3>v0.0 - Literally nothing</h3><br>
  - Literally nothing. What did you expect? oh right the default green prestige layer<br>
-<h3>v0.1 - A layer???<br>
- - Added the zero-operator layer.`
+<h3>v0.1 - A layer???</h3><br>
+ - Added the zero-hyperoperator layer.<br>
+<h4>v0.1.1 - An upgrade???</h4><br>
+ - Added u11 to the zero-hyperoperator layer`
 
 let winText = `congrats, you broke the fictional limit and beat the game! until a new update comes...`
 
@@ -43,6 +45,10 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(0.001)
+	
+	if(hasUpgrade('zo', 11))
+	gain = gain.times(new Decimal(12))
+	
 	return gain
 }
 
